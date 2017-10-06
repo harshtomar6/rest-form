@@ -6,9 +6,12 @@ let session = require('express-session')
 let cookieParser = require('cookie-parser')
 let config = require('./config')
 let homeRoute = require('./api/routes/homeRoute')
+let path = require('path')
 
 //Initialize app
 let app = express()
+
+app.use(express.static('client/build/'))
 
 //Define PORT number
 const port = process.env.PORT || 3001

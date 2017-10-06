@@ -2,6 +2,7 @@
 let express = require('express')
 let router = express.Router()
 let db = require('./../model/db');
+let path = require('path')
 
 //Enable cors
 router.use(function(req, res, next) {
@@ -10,10 +11,12 @@ router.use(function(req, res, next) {
   next();
 });
 
+router.use('/', express.static(path.resolve('client/build/static')));
+
 //Set routes for different path
 //Home Route
 router.get('/', (req, res, next) => {
-  res.send("API is working")
+  res.sendFile(path.resolve('client/build/index.html'));
 })
 
 //router to render signup page
@@ -23,6 +26,7 @@ router.get('/signup', (req, res, next) => {
 
 //router to handle post request for user signup
 router.post('/signup', (req, res, next) => {
+  console.log("Logged")
   db.createUser(req.body, (err, user) => {
     if(err)
       res.send(err)
