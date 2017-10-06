@@ -1,0 +1,50 @@
+#buddyList{
+  width: 500px;
+  margin: 0 auto;
+  padding: 12px;
+  padding-top: 50px; 
+}
+
+#buddyList h2{
+  text-align: center;
+  color: #2EB872;
+}
+
+.buddy-row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.buddy-row .firstName{
+ 
+}
+
+.buddy-row .avatar img{
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.btn{
+  background: #2EB872;
+  color: white;
+  width: 100%;
+  padding: 12px 60px; 
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.avatar {
+  display: flex;
+}
+
+.avatar p{
+  margin-right: 20px;
+  font-size: 24px; 
+  margin-top: 0px;
+  cursor: pointer
+}
