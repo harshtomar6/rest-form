@@ -16,7 +16,7 @@ router.use('/', express.static(path.resolve('client/build/static')));
 //Set routes for different path
 //Home Route
 router.get('/', (req, res, next) => {
-  res.sendFile(path.resolve('client/build/index.html'));
+  res.sendFile(path.resolve('build/index.html'));
 })
 
 //router to render signup page

@@ -11,7 +11,7 @@ let path = require('path')
 //Initialize app
 let app = express()
 
-app.use(express.static('client/build/'))
+app.use(express.static('build/'))
 
 //Define PORT number
 const port = process.env.PORT || 3001
